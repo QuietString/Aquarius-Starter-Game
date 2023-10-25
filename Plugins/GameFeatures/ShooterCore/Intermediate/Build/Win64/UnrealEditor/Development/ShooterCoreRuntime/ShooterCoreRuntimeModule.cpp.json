@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\cgdon\\documents\\unreal projects\\aquariusstartergame\\plugins\\gamefeatures\\shootercore\\source\\shootercoreruntime\\private\\shootercoreruntimemodule.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\cgdon\\documents\\unreal projects\\aquariusstartergame\\intermediate\\build\\win64\\aquariusstartergameeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\users\\cgdon\\documents\\unreal projects\\aquariusstartergame\\plugins\\gamefeatures\\shootercore\\intermediate\\build\\win64\\unrealeditor\\development\\shootercoreruntime\\definitions.shootercoreruntime.h",
+            "c:\\users\\cgdon\\documents\\unreal projects\\aquariusstartergame\\plugins\\gamefeatures\\shootercore\\source\\shootercoreruntime\\public\\shootercoreruntimemodule.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
