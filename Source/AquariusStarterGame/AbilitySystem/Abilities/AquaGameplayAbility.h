@@ -77,7 +77,7 @@ public:
  *
  *	The base gameplay ability class used by this project.
  */
-UCLASS(Abstract, HideCategories = Input, Meta = (ShortTolltip = "The base gameplay ability class used by this project."))
+UCLASS(Abstract, HideCategories = Input, Meta = (ShortTooltip = "The base gameplay ability class used by this project."))
 class AQUARIUSSTARTERGAME_API UAquaGameplayAbility : public UGameplayAbility
 {
 	GENERATED_BODY()
