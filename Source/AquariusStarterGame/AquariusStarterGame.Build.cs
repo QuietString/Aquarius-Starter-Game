@@ -35,6 +35,8 @@ public class AquariusStarterGame : ModuleRules
 			{
 				"EnhancedInput",
 				"UMG",
+				"Slate",
+				"SlateCore",
 			}
 		);
 	}

@@ -1,5 +1,4 @@
 #pragma once
-// Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
@@ -37,6 +36,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Aqua|Character")
 	bool GetIsAutoRunning() const;
+
 protected:
 
 	virtual void PostProcessInput(const float DeltaTime, const bool bGamePaused) override;

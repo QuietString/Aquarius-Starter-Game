@@ -10,6 +10,7 @@
 #include "Character/AquaPawnExtensionComponent.h"
 #include "Player/AquaPlayerController.h"
 #include "System/AquaAssetManager.h"
+#include "UI/MenuHUD.h"
 
 class UAquaAssetManager;
 
@@ -20,6 +21,7 @@ AAquaGameMode::AAquaGameMode(const FObjectInitializer& ObjectInitializer)
 	PlayerControllerClass = AAquaPlayerController::StaticClass();
 	PlayerStateClass = AAquaPlayerState::StaticClass();
 	DefaultPawnClass = AAquaCharacter::StaticClass();
+	HUDClass = AMenuHUD::StaticClass();
 }
 
 const UAquaPawnData* AAquaGameMode::GetPawnDataForController(const AController* InController) const
