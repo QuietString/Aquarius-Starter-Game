@@ -71,13 +71,9 @@ struct FAquaInventoryList
 
 public:
 
-	UAquaInventoryItemInstance* AddEntry(TSubclassOf<UAquaInventoryItemDefinition> ItemClass, int32 StackCount);
-	void AddEntry(UAquaInventoryItemInstance* Instance);
+	UAquaInventoryItemInstance* AddEntry(TSubclassOf<UAquaInventoryItemDefinition> ItemDef, int32 StackCount);
 
 	void RemoveEntry(UAquaInventoryItemInstance* Instance);
-
-private:
-	void BroadCastChangeMessage(FAquaInventoryEntry& Entry, int32 OldCount, int32 NewCount);
 
 private:
 	friend UAquaInventoryManagerComponent;
@@ -115,14 +111,15 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Inventory, BlueprintPure = false)
 	TArray<UAquaInventoryItemInstance*> GetAllItems() const;
 
+	UFUNCTION(BlueprintCallable, Category = Inventory, BlueprintPure)
+	UAquaInventoryItemInstance* FindFirstItemStackByDefinition(TSubclassOf<UAquaInventoryItemDefinition> ItemDef) const;
 
-protected:
-	// Called when the game starts
-	virtual void BeginPlay() override;
+	int32 GetTotalItemCountByDefinition(TSubclassOf<UAquaInventoryItemDefinition> ItemDef) const;
+	bool ConsumeItemsByDefinition(TSubclassOf<UAquaInventoryItemDefinition> ItemDef, int32 NumToConsume);
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+private:
+	UPROPERTY()
+	FAquaInventoryList InventoryList;
 
 		
 };

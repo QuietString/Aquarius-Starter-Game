@@ -35,6 +35,22 @@ void UAquaQuickBarComponent::CycleActiveSlotForward()
 
 void UAquaQuickBarComponent::CycleActiveSlotBackward()
 {
+	if (Slots.Num() < 2)
+	{
+		return;
+	}
+
+	const int32 OldIndex = (ActiveSlotIndex < 0 ? Slots.Num() - 1 : ActiveSlotIndex);
+	int32 NewIndex = ActiveSlotIndex;
+	do
+	{
+		NewIndex = (NewIndex - 1 + Slots.Num()) % Slots.Num();
+		if (Slots[NewIndex] != nullptr)
+		{
+			SetActiveSlotIndex(NewIndex);
+			return;
+		}
+	} while (NewIndex != OldIndex);
 }
 
 void UAquaQuickBarComponent::SetActiveSlotIndex(int32 NewIndex)
