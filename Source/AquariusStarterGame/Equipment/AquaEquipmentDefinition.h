@@ -30,8 +30,8 @@ struct FAquaEquipmentActorToSpawn
  *
  * Definition of a piece of equipment that can be applied to a pawn
  */
-UCLASS()
-class AQUARIUSSTARTERGAME_API UAquaEquipmentDefinition : public UObject
+UCLASS(Blueprintable, Const, Abstract, BlueprintType)
+class UAquaEquipmentDefinition : public UObject
 {
 	GENERATED_BODY()
 

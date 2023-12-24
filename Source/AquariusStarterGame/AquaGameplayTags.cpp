@@ -1,5 +1,3 @@
-// Copyright Epic Games, Inc. All Rights Reserved.
-
 #include "AquaGameplayTags.h"
 #include "GameplayTagsManager.h"
 #include "Engine/EngineTypes.h"

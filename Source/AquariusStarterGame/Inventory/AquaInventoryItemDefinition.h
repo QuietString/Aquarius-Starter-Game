@@ -9,7 +9,7 @@ class UAquaInventoryItemInstance;
 /**
  * Represents a fragment of an item definition
  */
-UCLASS()
+UCLASS(DefaultToInstanced, EditInlineNew, Abstract)
 class UAquaInventoryItemFragment : public UObject
 {
 	GENERATED_BODY()
@@ -22,7 +22,7 @@ public:
 /**
  * UAquaInventoryItemDefinition 
  */
-UCLASS()
+UCLASS(Blueprintable, Const, Abstract)
 class AQUARIUSSTARTERGAME_API UAquaInventoryItemDefinition : public UObject
 {
 	GENERATED_BODY()

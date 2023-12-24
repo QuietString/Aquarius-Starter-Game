@@ -1,12 +1,22 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+#include "InventoryFragment_SetStats.h"
+
+#include "AquaInventoryItemInstance.h"
 
 
-#include "Inventory/InventoryFragment_SetStats.h"
-
-InventoryFragment_SetStats::InventoryFragment_SetStats()
+void UInventoryFragment_SetStats::OnInstanceCreated(UAquaInventoryItemInstance* Instance)
 {
+	for (const auto& KVP : InitialItemStats)
+	{
+		Instance->AddStatTagStack(KVP.Key, KVP.Value);
+	}
 }
 
-InventoryFragment_SetStats::~InventoryFragment_SetStats()
+int32 UInventoryFragment_SetStats::GetItemStatByTag(FGameplayTag Tag) const
 {
+	if (const int32* StatPtr = InitialItemStats.Find(Tag))
+	{
+		return *StatPtr;
+	}
+
+	return 0;
 }

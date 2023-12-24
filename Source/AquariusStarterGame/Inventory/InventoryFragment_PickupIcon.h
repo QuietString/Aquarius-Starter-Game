@@ -1,15 +1,22 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
-
-/**
- * 
- */
-class AQUARIUSSTARTERGAME_API InventoryFragment_PickupIcon
+#include "AquaInventoryItemDefinition.h"
+#include "InventoryFragment_PickupIcon.generated.h"
+UCLASS()
+class UInventoryFragment_PickupIcon : public UAquaInventoryItemFragment
 {
+	GENERATED_BODY()
+	
 public:
-	InventoryFragment_PickupIcon();
-	~InventoryFragment_PickupIcon();
+	UInventoryFragment_PickupIcon();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	TObjectPtr<USkeletalMesh> SkeletalMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	FText DisplayName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	FLinearColor PadColor;
 };

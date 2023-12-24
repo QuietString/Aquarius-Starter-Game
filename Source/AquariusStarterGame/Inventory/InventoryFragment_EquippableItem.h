@@ -1,12 +1,13 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AquaInventoryItemDefinition.h"
 #include "Equipment/AquaEquipmentDefinition.h"
 #include "InventoryFragment_EquippableItem.generated.h"
 
 
 UCLASS()
-class AQUARIUSSTARTERGAME_API UInventoryFragment_EquippableItem : public UObject
+class UInventoryFragment_EquippableItem : public UAquaInventoryItemFragment
 {
 	GENERATED_BODY()
 

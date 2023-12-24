@@ -1,15 +1,21 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AquaInventoryItemDefinition.h"
+#include "InventoryFragment_QuickBarIcon.generated.h"
 
-/**
- * 
- */
-class AQUARIUSSTARTERGAME_API InventoryFragment_QuickBarIcon
+UCLASS()
+class UInventoryFragment_QuickBarIcon : public UAquaInventoryItemFragment
 {
+	GENERATED_BODY()
+	
 public:
-	InventoryFragment_QuickBarIcon();
-	~InventoryFragment_QuickBarIcon();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	FSlateBrush Brush;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	FSlateBrush AmmoBrush;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Appearance)
+	FText DisplayNameWhenEquipped;
 };

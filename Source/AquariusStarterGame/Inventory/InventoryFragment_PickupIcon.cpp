@@ -1,12 +1,6 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "Inventory/InventoryFragment_PickupIcon.h"
 
-InventoryFragment_PickupIcon::InventoryFragment_PickupIcon()
+UInventoryFragment_PickupIcon::UInventoryFragment_PickupIcon()
 {
-}
-
-InventoryFragment_PickupIcon::~InventoryFragment_PickupIcon()
-{
+	PadColor = FLinearColor::Green;
 }

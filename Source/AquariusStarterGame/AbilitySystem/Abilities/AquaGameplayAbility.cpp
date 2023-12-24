@@ -107,8 +107,6 @@ void UAquaGameplayAbility::TryActivateAbilityOnSpawn(const FGameplayAbilityActor
 
 void UAquaGameplayAbility::SetCameraMode(TSubclassOf<UAquaCameraMode> CameraMode)
 {
-	ENSURE_ABILITY_IS_INSTANTIATED_OR_RETURN(SetCameraMode, );
-
 	if (UAquaHeroComponent* HeroComponent = GetHeroComponentFromActorInfo())
 	{
 		HeroComponent->SetAbilityCameraMode(CameraMode, CurrentSpecHandle);
@@ -118,8 +116,6 @@ void UAquaGameplayAbility::SetCameraMode(TSubclassOf<UAquaCameraMode> CameraMode
 
 void UAquaGameplayAbility::ClearCameraMode()
 {
-	ENSURE_ABILITY_IS_INSTANTIATED_OR_RETURN(ClearCameraMode, );
-
 	if (ActiveCameraMode)
 	{
 		if (UAquaHeroComponent* HeroComponent = GetHeroComponentFromActorInfo())
